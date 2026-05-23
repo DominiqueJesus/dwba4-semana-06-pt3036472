@@ -1,0 +1,98 @@
+* {box-sizing: border-box}
+
+.slideshow {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.slides {
+    display: none;
+}
+
+.slides_indice {
+    position: relative;
+    left: 10px;
+    top: 45px;
+
+    color: white;
+    font-size: 12px;
+}
+
+.slides_imagens {
+    margin-top: 25px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.slides_legenda {
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    padding: 2px 12px;
+
+    text-align: center;
+    font-size: 15px;
+    color: white;
+}
+
+.anterior, .proximo {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 15px;
+    border-radius: 0 10px 10px 0;
+
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+
+    cursor: pointer;
+    transition: 0.5s ease;
+    user-select: none;
+}
+
+.proximo {
+    right: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.anterior:hover, .proximo:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.circulos_progresso {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.circulo {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+
+    background-color: rgba(128,128,128,0.5);
+    border-radius: 50%;
+    
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.active, .circulo:hover {
+    background-color: rgba(128,128,128,1);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}

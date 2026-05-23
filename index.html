@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 
 <html>
-<!-- Criar um arquivo menu que seja replicado em cada página com <object> -->
     <head>
 
         <meta charset="UTF-8"/>
 
         <link rel="icon" href="Imagens/favicon.ico" type="image/x-icon"/>
         <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/css" href="slideshow_style.css"/>
+        <script src="slideshow.js" defer></script>
 
         <title>dwba4-semana-04-pt3036472</title>
 
@@ -42,6 +43,76 @@
             type="image/jpeg"/>
 
         </header>
+
+        <nav class="slideshow_container">
+
+            <div class="slideshow">
+
+                <!--Seções do slideshow (índice, imagem e legenda)-->
+                <div class="slides fade">
+                    <div class="slides_indice">1 / 4</div>
+                    <img class="slides_imagens"
+                        src="Imagens/A.png"
+                        title="Agenda IFSP"
+                        alt="Slide 1: 'Anota Aí' - Agenda IFSP #Quarentena"
+                        type="image/png" />
+                    <div class="slides_legenda">'Anota Aí' - Agenda IFSP #Quarentena</div>    
+                </div>
+
+                <div class="slides fade">
+                    <div class="slides_indice">2 / 4</div>
+                    <img class="slides_imagens"
+                        src="Imagens/B.jpg"
+                        title="IFSP Coronavírus"
+                        alt="Slide 2: IFSP no combate ao coronavírus"
+                        type="image/jpeg" />
+                    <div class="slides_legenda">IFSP no Combate ao Coronavírus</div>    
+                </div>
+
+                <div class="slides fade">
+                    <div class="slides_indice">3 / 4</div>
+                    <img class="slides_imagens"
+                        src="Imagens/C.jpg"
+                        title="Vestibular Enem IFSP"
+                        alt="Slide 3: Vestibular Enem IFSP"
+                        type="image/jpeg" />
+                    <div class="slides_legenda">Vestibular Enem IFSP - Inscrições Gratuitas</div>    
+                </div>
+
+                <div class="slides fade">
+                    <div class="slides_indice">4 / 4</div>
+                    <h2 class="title">Conheça os desafios de inovação</h2>
+                    <iframe 
+                        class="video-inicial"
+                        alt="Slide 4: Vídeo - Desafios de Inovação (YouTube)"
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/5g5LQe3m8Po?si=3r0NlqgjvrYCofTa" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>   
+                </div>
+
+                <!-- Botões para avançar/recuar entre os slides -->
+                <a class="anterior" onclick="passarSlide(-1)">&#10094;</a>
+                <a class="proximo" onclick="passarSlide(1)">&#10095;</a>
+
+            </div>
+            <br/>
+
+            <!-- Círculos de progresso -->
+            <div class="circulos_progresso">
+                <span class="circulo" onclick="slideAtual(1)"></span>
+                <span class="circulo" onclick="slideAtual(2)"></span>
+                <span class="circulo" onclick="slideAtual(3)"></span>
+                <span class="circulo" onclick="slideAtual(4)"></span>
+            </div>
+
+        </nav>
+
 
         <aside class="container">
 
@@ -111,7 +182,8 @@
             <h2 class="title">Conheça os desafios de inovação</h2>
             
             <iframe
-                id="video-inicial"
+                class="video-inicial"
+                alt="Vídeo - Desafios de Inovação (YouTube)"
                 width="560" 
                 height="315" 
                 src="https://www.youtube.com/embed/5g5LQe3m8Po?si=Wz2Q0qq_M75xFTaf" 
