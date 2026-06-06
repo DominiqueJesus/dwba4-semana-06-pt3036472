@@ -10,40 +10,94 @@
     max-width: 100%;  /* Garante que a imagem não "estoure" o tamanho da tela no mobile */
 }
 
+/* Entrar.html */
+.entrarDados {
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    padding: 10px;
+    width: 80%;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.entrarDados:focus {
+    outline: none;
+    border-color: #00a3ff;
+    box-shadow: 0 0 0 3px rgba(0, 163, 255, 0.18);
+}
+
+.entrarDados:focus-visible {
+    outline: none;
+    border-color: #00a3ff;
+    box-shadow: 0 0 0 3px rgba(0, 163, 255, 0.18);
+}
+
+.loginbtn {
+    width: 80%;
+    padding: 10px;
+
+    color: white;
+    background-color: #0088ff;
+    border: none;
+    border-radius: 4px;
+}
+
+.chkLembrar {
+    display: inline-flex;
+    margin: 15px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 8px;
+}
+
+.chkLembrar input {
+    vertical-align: middle;
+}
+
+.senha {
+    font-size: 90%;
+    display: inline-block;
+}
+
+main .col-4 {
+    text-align: center;
+    margin-top: 15px;
+}
+
 /* Layout Responsivo */
 
-.container {
+.myContainer {
     display: grid;
     grid-template-columns: auto auto;
     margin: 10px;
     justify-items: center;
 }
 
-.container div {
+.myContainer div {
     width: 100%;
 }
 
-.container img {
+.myContainer img {
     display: block;
     width: 50%;
     padding: 20px;
     margin: auto;
 }
 
-.container p {
+.myContainer p {
     text-align: center;
     font-size: 70%;
     margin: 10px;
 }
 
-.container h5 {
+.myContainer h5 {
     text-align: center;
     margin: -10px;
 }
 
 @media (max-width: 650px) {
 
-    .container {
+    .myContainer {
         display: flex;
         flex-direction: column;
         margin: 10px;
@@ -51,18 +105,18 @@
         align-items: center;
     }
 
-    .container img:not(.slides_imagens) {
+    .myContainer img:not(.slides_imagens) {
         display: block;
         width: 50%;
         padding: 20px;
     }
 
-    .container p {
+    .myContainer p {
         text-align: center;
         font-size: 50%;
     }
 
-    .container h5 {
+    .myContainer h5 {
         text-align: center;
         font-size: 50%;
         margin: auto;
@@ -103,12 +157,16 @@
 
 .top_nav {
     display: flex;
+    align-items: center;
     white-space: nowrap; /* Impede que os itens pulem de linha */
     background-color: #545454;
     height: 50px;
 }
 
-.top_nav a {
+.top_nav a,
+.top_nav a:visited,
+.top_nav a:hover,
+.top_nav a:active {
     color: white;
     text-decoration: none;
 } 
@@ -116,7 +174,9 @@
 .top_nav button {
     background-color: #545454;
     color: white;   
-    padding: 16px;
+    padding: 0 16px;
+    height: 100%;
+    line-height: 50px;
     font-size: 16px;
     border: none;
 }
@@ -173,9 +233,7 @@
 /* Dropdown Button */
 .dropbtn {
     background-color: #545454;
-    color: white;   
-    padding: 16px;
-    font-size: 16px;
+    color: white;
     border: none;
 }
 
@@ -190,14 +248,18 @@
     white-space: nowrap;
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    color: black;
+    background-color: #ffffff;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 /* Links inside the dropdown */
-.dropdown-content a {
+.dropdown-content a,
+.dropdown-content a:visited,
+.dropdown-content a:hover,
+.dropdown-content a:active {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
