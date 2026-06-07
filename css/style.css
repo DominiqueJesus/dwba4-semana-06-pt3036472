@@ -16,6 +16,10 @@
     padding: 25px;
 }
 
+.container-fluid {
+    margin: "0 0 0 20px";
+}
+
 .entrarDados {
     border: 1px solid #d1d1d1;
     border-radius: 4px;
