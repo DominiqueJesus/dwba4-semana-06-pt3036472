@@ -11,6 +11,11 @@
 }
 
 /* Entrar.html */
+
+.container {
+    padding: 25px;
+}
+
 .entrarDados {
     border: 1px solid #d1d1d1;
     border-radius: 4px;
@@ -42,26 +47,12 @@
 }
 
 .chkLembrar {
-    display: inline-flex;
     margin: 15px;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
     gap: 8px;
-}
-
-.chkLembrar input {
-    vertical-align: middle;
 }
 
 .senha {
     font-size: 90%;
-    display: inline-block;
-}
-
-main .col-4 {
-    text-align: center;
-    margin-top: 15px;
 }
 
 /* Layout Responsivo */
@@ -128,6 +119,7 @@ main .col-4 {
 
 #page_top {
     background-color: #017f03;
+    padding: 0px;
 }
 
 #nav_sobre {
